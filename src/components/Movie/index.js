@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MovieList(props) {
+function Movie(props) {
    return(
       <div>
          <p>{props.title}</p>
@@ -9,4 +9,4 @@ function MovieList(props) {
    )
 }
 
-export default MovieList;
+export default Movie;

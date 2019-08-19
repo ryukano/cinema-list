@@ -1,7 +1,7 @@
 import React from 'react';
-import Movie from './Movie'
+import Movie from '../Movie'
 
-class MovieList extends React.Component {
+class MovieData extends React.Component {
 
    state = {
       list: null
@@ -35,4 +35,4 @@ class MovieList extends React.Component {
    }
 }
 
-export default MovieList;
+export default MovieData;

@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import MovieList from './components/MovieList'
+import MovieData from './components/MovieData'
 
 class App extends React.Component {
 
    render() {
       return(
          <div>
-            <MovieList></MovieList>
+            <MovieData></MovieData>
          </div>
 
       )
