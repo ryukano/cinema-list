@@ -1,0 +1,24 @@
+.wrapper {
+   background: rgb(0,66,255);
+   background: linear-gradient(266deg, rgba(0,66,255,0.5363095921962535) 0%, rgba(94,182,245,0.5895308807116597) 50%, rgba(0,212,255,0.7183824213279062) 89%);
+}
+
+.movie-list {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.movie-box {
+   width: 250px;
+   height: 400px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   font-size: 1.2em;
+}
+
+.movie-box img {
+
+}

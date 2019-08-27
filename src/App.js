@@ -1,14 +1,23 @@
-import React from 'react';
-import './App.css';
-import MovieData from './components/MovieData'
+import React, {Component} from 'react';
+import {Provider} from 'react-redux';
 
-class App extends React.Component {
+import { store } from './store/store'
+import './App.css';
+import MovieData from './components/MovieData';
+
+
+
+
+class App extends Component {
 
    render() {
       return(
-         <div>
-            <MovieData></MovieData>
+         <Provider store={store}>
+         <div className="wrapper">
+            <header className="App-header"></header>
+            <MovieData/>
          </div>
+         </Provider>
 
       )
    }

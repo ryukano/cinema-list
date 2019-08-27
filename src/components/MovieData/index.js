@@ -1,38 +1,55 @@
-import React from 'react';
-import Movie from '../Movie'
+import React, {Component} from 'react';
+import { connect } from 'react-redux';
 
-class MovieData extends React.Component {
+import Movie from '../Movie';
+import {GetMovieList} from '../../store/actions/getMovieList'
 
-   state = {
-      list: null
-   }
 
-   gettingData = async () => {
-      let response = await
-      fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=819410248794bdbe3831b84d02afd0c0&language=ru`)
-      if (response.ok) {
-         const allData = await response.json();
-         const array = allData.results.map(arr => {return arr});
-         this.setState({list: array});
-        }
-      }
+class MovieData extends Component {
 
    componentDidMount() {
-      this.gettingData();
+      this.props.onGetMovieList();
    }
 
    render() {
-      let list = this.state.list;
+      console.log(this.props)
+      let movieList = this.props.movieList;
+      console.log(movieList);
+
+      if (this.props.hasErrored) {
+         return <p>Sorry! There was an error loading the items</p>;
+     }
+
+     if (this.props.isLoading) {
+         return <p>Loading…</p>;
+     }
       return(
-         <div>
-            {list && list.map((item, key) =>
+         <div className="movie-list">
+
+            {/* {movieList && movieList.map((item, key) =>
                <Movie key={item.id}
                       title={item.title}
                       imgSRC = {`https://image.tmdb.org/t/p/w200${item.poster_path}`}
                ></Movie>
-            )}
-         </div> )
+            )} */}
+         </div>
+         )
    }
 }
 
-export default MovieData;
+let mapStateToProps = state => {
+   return {
+      movieList: state.movieList,
+      isLoading: state.isLoading,
+      hasErrored: state.hasErrored
+   }
+};
+
+let mapDispatchToProps = (dispatch) => {
+   return {
+      onGetMovieList: () => {dispatch(GetMovieList());
+      }
+   }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MovieData);
