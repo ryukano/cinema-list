@@ -25,7 +25,8 @@ export const fetchMovieList = () => {
             response.json()
          })
          .then((movieList) => {
-            dispatch(movieListFetchDataSuccess(movieList))
+            console.log(movieList.results)
+            dispatch(movieListFetchDataSuccess(movieList.results))
             })
          .catch(() => dispatch(movieListHasErrored(true)))
          .finally(() => dispatch(movieListIsLoading(false)))
