@@ -15,23 +15,17 @@ export const movieListIsLoading = bool => {
 }
 
 export const fetchMovieList = () => {
-   return dispatch => {
-      dispatch(movieListIsLoading(true));
+   return dispatch =>
+      // dispatch(movieListIsLoading(true));
       GetMovieList()
-         .then(response => {
-            if (!response.ok) {
-               throw Error(response.statusText);
-            }
-            response.json()
-         })
+         .then(response => response.json())
          .then((movieList) => {
-            console.log(movieList.results)
+            console.log(movieList)
             dispatch(movieListFetchDataSuccess(movieList.results))
             })
-         .catch(() => dispatch(movieListHasErrored(true)))
+         .catch(error => dispatch(movieListHasErrored(true)))
          .finally(() => dispatch(movieListIsLoading(false)))
    }
-}
 
 
 export const movieListFetchDataSuccess = movieList => {
