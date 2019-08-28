@@ -8,7 +8,7 @@ import {fetchMovieList} from '../../store/actions/movieList'
 class MovieData extends Component {
 
    componentDidMount() {
-      this.props.onGetMovieList();
+      this.props.onFetchMovieList();
    }
 
    render() {
@@ -47,8 +47,7 @@ let mapStateToProps = state => {
 
 let mapDispatchToProps = (dispatch) => {
    return {
-      onFetchMovieList: () => {dispatch(fetchMovieList());
-      }
+      onFetchMovieList: () => dispatch(fetchMovieList())
    }
 }
 
