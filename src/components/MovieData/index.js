@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 import Movie from '../Movie';
-import {GetMovieList} from '../../store/actions/getMovieList'
+import {fetchMovieList} from '../../store/actions/movieList'
 
 
 class MovieData extends Component {
@@ -26,12 +26,12 @@ class MovieData extends Component {
       return(
          <div className="movie-list">
 
-            {/* {movieList && movieList.map((item, key) =>
+            {movieList && movieList.map((item, key) =>
                <Movie key={item.id}
                       title={item.title}
                       imgSRC = {`https://image.tmdb.org/t/p/w200${item.poster_path}`}
                ></Movie>
-            )} */}
+            )}
          </div>
          )
    }
@@ -39,15 +39,15 @@ class MovieData extends Component {
 
 let mapStateToProps = state => {
    return {
-      movieList: state.movieList,
-      isLoading: state.isLoading,
-      hasErrored: state.hasErrored
+      movieList: state.getMovieListReducer.movieList,
+      isLoading: state.getMovieListReducer.isLoading,
+      hasErrored: state.getMovieListReducer.hasErrored
    }
 };
 
 let mapDispatchToProps = (dispatch) => {
    return {
-      onGetMovieList: () => {dispatch(GetMovieList());
+      onFetchMovieList: () => {dispatch(fetchMovieList());
       }
    }
 }
