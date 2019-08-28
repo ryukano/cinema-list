@@ -16,7 +16,6 @@ export const movieListIsLoading = bool => {
 
 export const fetchMovieList = () => {
    return dispatch =>
-      // dispatch(movieListIsLoading(true));
       GetMovieList()
          .then(response => response.json())
          .then((movieList) => {
@@ -25,7 +24,7 @@ export const fetchMovieList = () => {
             })
          .catch(error => dispatch(movieListHasErrored(true)))
          .finally(() => dispatch(movieListIsLoading(false)))
-   }
+}
 
 
 export const movieListFetchDataSuccess = movieList => {
