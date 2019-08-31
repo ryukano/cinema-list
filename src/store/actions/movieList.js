@@ -17,6 +17,7 @@ export const movieListIsLoading = bool => {
 export const fetchMovieList = () => {
    return async dispatch => {
       try {
+         dispatch(movieListIsLoading(true));
          const response = await GetMovieList();
          const movieList = await response.json();
 
