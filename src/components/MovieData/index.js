@@ -12,16 +12,14 @@ class MovieData extends Component {
    }
 
    render() {
-      console.log(this.props)
       let movieList = this.props.movieList;
-      console.log(movieList);
 
       if (this.props.hasErrored) {
-         return <p>Sorry! There was an error loading the items</p>;
+         return <p className="fetch fetch-error">Sorry! There was an error loading the items</p>;
      }
 
      if (this.props.isLoading) {
-         return <p>Loading…</p>;
+         return <p className="fetch fetch-loading">Loading…</p>;
      }
       return(
          <div className="movie-list">
@@ -47,7 +45,7 @@ let mapStateToProps = state => {
 
 let mapDispatchToProps = (dispatch) => {
    return {
-      onFetchMovieList: () => dispatch(fetchMovieList())
+      onFetchMovieList: (type) => dispatch(fetchMovieList(type))
    }
 }
 

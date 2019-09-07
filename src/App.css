@@ -1,11 +1,21 @@
-.wrapper {
+body {
+   width: 100%;
+   min-height: 100%;
    background: rgb(0,66,255);
    background: linear-gradient(266deg, rgba(0,66,255,0.5363095921962535) 0%, rgba(94,182,245,0.5895308807116597) 50%, rgba(0,212,255,0.7183824213279062) 89%);
+   overflow-y: scroll;
+}
+
+.header {
+   width: 100%;
+   height: 5em;
+   background: rgb(239, 239, 240);
 }
 
 .movie-list {
    display: flex;
    justify-content: center;
+   align-items: flex-start;
    flex-wrap: wrap;
 }
 
@@ -20,6 +30,52 @@
    font-size: 1.2em;
 }
 
-/* .movie-box img {
+.button-group {
+   display: flex;
+   justify-content: space-between;
+   padding-top: 3.5em;
+   padding-bottom: 0.5em;
+   padding-left: 20%;
+   padding-right: 20%;
+}
 
-} */
+.my-button {
+   width: 150px;
+   height: 50px;
+   background: rgba(115, 220, 241, 0.932);
+   border-radius: 1em;
+   border: 2px double rgba(23, 195, 230, 0.932);
+   box-shadow: 0 2px 2px rgba(23, 195, 230, 0.932);
+}
+
+.my-button:hover {
+   border-bottom: 1px solid rgba(23, 195, 230, 0.932);
+   position: relative;
+   top: 1px;
+ }
+
+ .my-button:active {
+   border-bottom: 1px solid transparent;
+   border-color: transparent;
+   position: relative;
+   top: 2px;
+ }
+
+ .my-button:focus {
+    outline: none;
+}
+
+.b-selected {
+   width: 150px;
+   height: 50px;
+   border-radius: 1em;
+   background: rgb(20, 210, 248);
+   border-bottom: 1px solid transparent;
+}
+
+.fetch {
+   display: flex;
+   justify-content: center;
+   padding-top: 13%;
+   font-size: 2em;
+}
