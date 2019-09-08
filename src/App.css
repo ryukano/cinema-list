@@ -1,6 +1,10 @@
+* {
+   margin: 0;
+}
+
 body {
+   height: 100%;
    width: 100%;
-   min-height: 100%;
    background: rgb(0,66,255);
    background: linear-gradient(266deg, rgba(0,66,255,0.5363095921962535) 0%, rgba(94,182,245,0.5895308807116597) 50%, rgba(0,212,255,0.7183824213279062) 89%);
    overflow-y: scroll;
@@ -9,6 +13,13 @@ body {
 .header {
    width: 100%;
    height: 5em;
+   background: rgb(239, 239, 240);
+}
+
+.footer {
+   width: 100%;
+   height: 5em;
+   flex: 0 0 auto;
    background: rgb(239, 239, 240);
 }
 
@@ -28,6 +39,12 @@ body {
    justify-content: flex-end;
    text-align: center;
    font-size: 1.2em;
+}
+
+.title-img {
+   width: 200px;
+   min-height: 270px;
+   background-image: url(./img/bg-poster.png);
 }
 
 .button-group {
@@ -73,7 +90,18 @@ body {
    border-bottom: 1px solid transparent;
 }
 
-.fetch {
+.naw-arrows {
+   padding-top: 50px;
+   padding-bottom: 50px;
+   display: flex;
+   justify-content: space-around;
+}
+
+.arrow {
+   width: 250px;
+}
+
+.error-message, .loading-message {
    display: flex;
    justify-content: center;
    padding-top: 13%;

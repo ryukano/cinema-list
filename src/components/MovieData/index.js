@@ -15,11 +15,11 @@ class MovieData extends Component {
       let movieList = this.props.movieList;
 
       if (this.props.hasErrored) {
-         return <p className="fetch fetch-error">Sorry! There was an error loading the items</p>;
+         return <p className="error-message">Sorry! There was an error loading the items</p>;
      }
 
      if (this.props.isLoading) {
-         return <p className="fetch fetch-loading">Loading…</p>;
+         return <p className="loading-message">Loading…</p>;
      }
       return(
          <div className="movie-list">

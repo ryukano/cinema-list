@@ -14,11 +14,11 @@ export const movieListIsLoading = bool => {
    }
 }
 
-export const fetchMovieList = (type = 'now_playing', page = '1') => {
+export const fetchMovieList = (moviesType = 'now_playing', page = '1') => {
    return async dispatch => {
       try {
          dispatch(movieListIsLoading(true));
-         const response = await GetMovieList(type);
+         const response = await GetMovieList(moviesType, page);
          const movieList = await response.json();
 
          console.log('movieList.results', movieList.results);
