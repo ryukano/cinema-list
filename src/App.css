@@ -101,6 +101,17 @@ body {
    width: 250px;
 }
 
+.current-page {
+   width: 150px;
+   height: 50px;
+   text-align: center;
+   line-height: 2em;
+   font-size: 1.2em;
+   background: rgba(115, 220, 241, 0.932);
+   border-radius: 1em;
+   border: 2px double rgba(23, 195, 230, 0.932);
+}
+
 .error-message, .loading-message {
    display: flex;
    justify-content: center;

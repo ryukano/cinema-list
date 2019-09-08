@@ -5,10 +5,8 @@ import { store } from './store/store'
 import './App.css';
 import MovieData from './components/MovieData';
 import Button from './components/Button';
-import NavArrow from './components/NavArrow'
-
-
-
+import NavArrow from './components/NavArrow';
+import CurrentPage from './components/CurrentPage';
 
 class App extends Component {
 
@@ -32,6 +30,7 @@ class App extends Component {
 
                <div className="naw-arrows">
                   <NavArrow navArrowText="previus page" navDirection="previus"></NavArrow>
+                  <CurrentPage/>
                   <NavArrow navArrowText="next page" navDirection="next"></NavArrow>
                </div>
 
