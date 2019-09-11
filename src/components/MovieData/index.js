@@ -26,6 +26,7 @@ class MovieData extends Component {
 
             {movieList && movieList.map((item, key) =>
                <Movie key={item.id}
+                      movieID={item.id}
                       title={item.title}
                       imgSRC = {`https://image.tmdb.org/t/p/w200${item.poster_path}`}
                ></Movie>

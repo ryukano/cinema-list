@@ -2,34 +2,25 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 import { fetchMovieList } from '../../store/actions/movieList';
-import { changeSelectedButton } from '../../modules/changeSelectedButton';
 import { currentMoviesType } from '../../store/actions/currentMoviesType';
 import { currentMoviesPage } from '../../store/actions/currentMoviesPage';
 
 
 class Button extends Component {
 
-   componentDidMount() {
-      const defaultCheckedButton = document.getElementById(1);
-      defaultCheckedButton.classList.add('b-selected');
-   }
-
    render() {
-      const buttonText = this.props.buttonName;
-      const moviesType = this.props.moviesType;
-      const id = this.props.id;
+
       return (
-         <button  className="my-button"
-                  id={id}
+         <button
+                  className={this.props.className}
                   onClick={(e) => {
                      if (!e.target.classList.contains('b-selected')) {
-                        this.props.onFetchMovieList(moviesType);
-                        this.props.onCurrentMoviesType(moviesType);
+                        this.props.onFetchMovieList(this.props.moviesType);
+                        this.props.onCurrentMoviesType(this.props.moviesType);
                         this.props.onCurrentMoviesPage('1');
-                        changeSelectedButton(id);
                      } else e.preventDefault();
                   }
-         }>{buttonText}</button>
+         }>{this.props.buttonName}</button>
       )
    }
 }

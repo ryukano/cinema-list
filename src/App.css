@@ -87,7 +87,12 @@ body {
    height: 50px;
    border-radius: 1em;
    background: rgb(20, 210, 248);
-   border-bottom: 1px solid transparent;
+   border: 2px double rgba(23, 195, 230, 0.932);
+   box-shadow: 0 2px 2px rgba(23, 195, 230, 0.932);
+}
+
+.b-selected:focus {
+   outline: none;
 }
 
 .naw-arrows {
