@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import MovieData from '../MovieData';
 import MovieTypesButtons from '../MoviesTypeButtons';
@@ -8,6 +10,8 @@ import CurrentPage from '../CurrentPage';
 class MovieList extends Component {
 
    render() {
+      console.log('currentMoviesType ', this.props.currentMoviesType);
+      console.log('currentPage ', this.props.currentPage);
 
       return(
 
@@ -18,9 +22,18 @@ class MovieList extends Component {
             <MovieData/>
 
             <div className="naw-arrows">
-               <NavArrow navArrowText="previus page" navDirection="previus"></NavArrow>
+               <div>
+                  <NavArrow navArrowText="previus page" navDirection="previus"/>
+                  <Redirect to={`/${this.props.currentMoviesType}/${this.props.currentPage}`}/>
+               </div>
+
                <CurrentPage/>
-               <NavArrow navArrowText="next page" navDirection="next"></NavArrow>
+
+               <div>
+                  <NavArrow navArrowText="next page" navDirection="next"/>
+                  <Redirect to={`/${this.props.currentMoviesType}/${this.props.currentPage}`}/>
+               </div>
+
             </div>
 
          </div>
@@ -29,4 +42,11 @@ class MovieList extends Component {
    }
 }
 
-export default MovieList;
+let mapStateToProps = state => {
+   return {
+      currentMoviesType: state.currentMoviesTypeReducer.currentMoviesType,
+      currentPage: state.currentMoviesPageReducer.currentPage
+   }
+};
+
+export default connect(mapStateToProps, null)(MovieList);

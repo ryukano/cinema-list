@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
-import Movie from '../Movie';
-import {fetchMovieList} from '../../store/actions/movieList'
+import MovieBox from '../MovieBox';
+import { fetchMovieList } from '../../store/actions/movieList'
 
 
 class MovieData extends Component {
 
    componentDidMount() {
-      this.props.onFetchMovieList();
+      this.props.onFetchMovieList(this.props.currentMoviesType, this.props.currentPage);
    }
 
    render() {
@@ -25,11 +25,11 @@ class MovieData extends Component {
          <div className="movie-list">
 
             {movieList && movieList.map((item, key) =>
-               <Movie key={item.id}
+               <MovieBox key={item.id}
                       movieID={item.id}
                       title={item.title}
                       imgSRC = {`https://image.tmdb.org/t/p/w200${item.poster_path}`}
-               ></Movie>
+               ></MovieBox>
             )}
          </div>
          )
@@ -40,13 +40,15 @@ let mapStateToProps = state => {
    return {
       movieList: state.getMovieListReducer.movieList,
       isLoading: state.getMovieListReducer.isLoading,
-      hasErrored: state.getMovieListReducer.hasErrored
+      hasErrored: state.getMovieListReducer.hasErrored,
+      currentMoviesType: state.currentMoviesTypeReducer.currentMoviesType,
+      currentPage: state.currentMoviesPageReducer.currentPage
    }
 };
 
 let mapDispatchToProps = (dispatch) => {
    return {
-      onFetchMovieList: (type) => dispatch(fetchMovieList(type))
+      onFetchMovieList: (type, page) => dispatch(fetchMovieList(type, page))
    }
 }
 

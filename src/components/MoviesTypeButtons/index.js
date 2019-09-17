@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Button from '../Button';
@@ -11,10 +12,13 @@ class MoviesTypeButtons extends Component {
       return (
          <div className="button-group">
             {buttonsConfig.map((config, index) =>
-               <Button  className={this.props.currentMoviesType !== config.moviesType ? "my-button" : "b-selected"}
-                        key={index}
-                        {...config}
-               />
+            <div key={index}>
+                  <Button  className={this.props.currentMoviesType !== config.moviesType ? "my-button" : "b-selected"}
+                     {...config}
+                  />
+                  <Redirect to={`/${this.props.currentMoviesType}/${this.props.currentPage}`}/>
+            </div>
+
             )}
          </div>
       )
@@ -23,7 +27,8 @@ class MoviesTypeButtons extends Component {
 
 let mapStateToProps = state => {
    return {
-      currentMoviesType: state.currentMoviesTypeReducer.currentMoviesType
+      currentMoviesType: state.currentMoviesTypeReducer.currentMoviesType,
+      currentPage: state.currentMoviesPageReducer.currentPage
    }
 }
 

@@ -7,6 +7,7 @@ import './App.css';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
+import WelcomePage from './components/WeclomePage';
 import MovieList from './components/MovieList';
 import MovieDetail from './components/MovieDetail';
 
@@ -21,8 +22,9 @@ class App extends Component {
 
             <Router>
                <Switch>
-                  <Route path='/' exact component={MovieList}/>
-                  <Route path='/:movieID' component={MovieDetail}/>
+                  <Route path='/' exact component={WelcomePage}></Route>
+                  <Route path='/:currentMovieType/:currentMoviePage' exact component={MovieList}/>
+                  <Route path='/:currentMovieType/:currentMoviePage/:movieID' exact component={MovieDetail}/>
                </Switch>
 
 
