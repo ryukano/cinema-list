@@ -4,11 +4,16 @@ import { connect } from 'react-redux';
 
 function WelcomePage(props) {
    return(
-      <div>
-         <p>Hello world</p>
-         <Link to={`/${props.currentMoviesType}/${props.currentPage}`}>
-            <p>Перейти к списку фильмов</p>
-         </Link>
+      <div className="welcome-page">
+         <div className="welcome-info">
+            <p>Here you can get up-to-date information about popular, new movies or movies that are being shown in cinema now.</p>
+         </div>
+         <div className="welcome-link-wrapper">
+            <Link className="welcome-link" to={`/${props.currentMoviesType}/${props.currentPage}`}>
+               <p>GO TO THE MOVIE LIST &#187;</p>
+            </Link>
+         </div>
+
       </div>
    )
 }

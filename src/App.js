@@ -18,19 +18,20 @@ class App extends Component {
          <Provider store={store}>
          <div className="wrapper">
 
-            <header className="header"></header>
+            <header className="header"><div>fsdfsdfsd</div></header>
 
+            <div className="content">
             <Router>
                <Switch>
                   <Route path='/' exact component={WelcomePage}></Route>
                   <Route path='/:currentMovieType/:currentMoviePage' exact component={MovieList}/>
                   <Route path='/:currentMovieType/:currentMoviePage/:movieID' exact component={MovieDetail}/>
                </Switch>
-
-
             </Router>
+            </div>
 
-            <footer className="footer"></footer>
+
+            <footer className="footer"><div>sdsfsdf</div></footer>
 
 
          </div>

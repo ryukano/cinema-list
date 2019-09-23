@@ -23,14 +23,14 @@ class MovieList extends Component {
 
             <div className="naw-arrows">
                <div>
-                  <NavArrow navArrowText="previus page" navDirection="previus"/>
+                  <NavArrow navArrowText="&#xab; PREVIUS PAGE" navDirection="previus"/>
                   <Redirect to={`/${this.props.currentMoviesType}/${this.props.currentPage}`}/>
                </div>
 
                <CurrentPage/>
 
                <div>
-                  <NavArrow navArrowText="next page" navDirection="next"/>
+                  <NavArrow navArrowText="NEXT PAGE &#xbb;" navDirection="next"/>
                   <Redirect to={`/${this.props.currentMoviesType}/${this.props.currentPage}`}/>
                </div>
 

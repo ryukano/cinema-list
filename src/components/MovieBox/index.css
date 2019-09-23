@@ -1,0 +1,39 @@
+.movie-box {
+   min-width: 100%;
+   min-height: 530px;
+   border-radius: 0.2em;
+   background: #1d1d1d;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   font-size: 1.2em;
+   padding: 0.5em 0.5em 0em 0.5em;
+}
+
+.movie-box:hover {
+   box-shadow: 0.2em 0.2em 0.2em #1d1d1d;
+}
+
+.title-img {
+   width: 100%;
+}
+
+.movie-title, .movie-releaseDate, .link-to-movie-info {
+   color: white;
+   font-weight: bold;
+}
+
+.movie-releaseDate {
+   color: rgba(255, 255, 255, 0.7);
+   font-size: 0.55em;
+}
+
+.link-to-movie-info {
+   font-size: 0.7em;
+}
+
+.link-to-movie-info:hover {
+   font-size: 0.71em;
+   color: rgba(255, 255, 255, 0.7);
+   text-decoration: none;
+}

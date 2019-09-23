@@ -1,0 +1,90 @@
+.movie-detail {
+   display: flex;
+   flex-direction: column;
+}
+
+.movie-detail-poster {
+   height: 90vh;
+}
+
+.movie-detail-first-block {
+   display: flex;
+   padding: 1em 1em 1em 1em;
+}
+
+.movie-detail-info {
+   display: flex;
+   flex-direction: column;
+   background: #1d1d1da1;
+   margin-left: 1em;
+   padding-left: 1em;
+}
+
+.movie-detail-title{
+   font-size: 2.5em;
+   color: rgba(255, 255, 255, 0.8);
+   font-weight: bold;
+}
+
+.movie-detail-release-date {
+   color: rgba(255, 255, 255, 0.65);
+   font-size: 1.2em;
+   margin-top: -1em;
+   padding-bottom: 1em;
+}
+
+.movie-detail-average {
+   color: rgba(255, 255, 255, 0.65);
+   font-size: 1.5em;
+}
+
+.movie-detail-genres, .movie-detail-production-counties {
+   display: flex;
+   color: rgba(255, 255, 255, 0.65);
+   font-size: 1.5em;
+   margin-top: -0.5em;
+}
+
+.movie-detail-production-counties {
+   font-size: 1.2em;
+   margin-top: -1em;
+}
+
+.movie-detail-genres-genre:not(:last-child):after, .movie-detail-production-counties-country:not(:last-child):after {
+   content: ',';
+}
+
+.movie-detail-genres-genre, .movie-detail-production-counties-country {
+   padding-left: 0.5em;
+}
+
+.movie-detail-overview {
+   font-size: 1.5em;
+   color: rgba(255, 255, 255, 0.8);
+}
+
+.movie-detail-tagline {
+   padding-top: 1.5em;
+   color: rgba(255, 255, 255, 0.8);
+   font-size: 1.8em;
+}
+
+.movie-link-to-list {
+   width: 40vh;
+   height: 8vh;
+   align-self: center;
+   text-align: center;
+   font-size: 2.5vh;
+   padding: 2vh 1vh 0 0;
+   margin-top: 5vh;
+   border-radius: 0.1em;
+}
+
+.movie-link-to-list:hover {
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+}
+
+.movie-link-to-list:active {
+   color: rgba(252, 154, 42, 0.685);
+}

@@ -1,0 +1,32 @@
+.arrow {
+   width: 30vh;
+   height: 9vh;
+   font-size: 1.3em;
+   font-weight: bold;
+   background: rgba(24, 22, 20, 0.747);
+   border-radius: 0.15em;
+   color: rgba(255, 255, 255, 0.6);
+   border: none;
+}
+
+.arrow:hover {
+   background: rgba(24, 22, 20, 0.747);
+   color: rgba(255, 255, 255, 0.85);
+   border-radius: 0.15em;
+ }
+
+ .arrow:active {
+   color: rgba(252, 154, 42, 0.685);
+   box-shadow: 0 0 0.5em rgba(24, 22, 20, 0.747);
+ }
+
+ .arrow:focus {
+    outline: none;
+}
+
+.naw-arrows {
+   padding-top: 50px;
+   padding-bottom: 50px;
+   display: flex;
+   justify-content: space-around;
+}

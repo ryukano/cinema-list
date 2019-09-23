@@ -4,11 +4,9 @@ import { connect } from 'react-redux';
 class CurrentPage extends Component {
 
    render() {
-
       return (
          <div className="current-page">{this.props.currentPage}</div>
       )
-
    }
 }
 

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import MovieBox from '../MovieBox';
 import { fetchMovieList } from '../../store/actions/movieList'
 
-
 class MovieData extends Component {
 
    componentDidMount() {
@@ -12,7 +11,7 @@ class MovieData extends Component {
    }
 
    render() {
-      let movieList = this.props.movieList;
+      const movieList = this.props.movieList;
 
       if (this.props.hasErrored) {
          return <p className="error-message">Sorry! There was an error loading the items</p>;
@@ -22,17 +21,19 @@ class MovieData extends Component {
          return <p className="loading-message">Loading…</p>;
      }
       return(
+
          <div className="movie-list">
 
             {movieList && movieList.map((item, key) =>
                <MovieBox key={item.id}
                       movieID={item.id}
+                      releaseDate = {item.release_date}
                       title={item.title}
-                      imgSRC = {`https://image.tmdb.org/t/p/w200${item.poster_path}`}
+                      imgSRC = {`https://image.tmdb.org/t/p/w400${item.poster_path}`}
                ></MovieBox>
             )}
          </div>
-         )
+      )
    }
 }
 

@@ -1,125 +1,38 @@
+@import './components/MoviesTypeButtons/index.css';
+@import './components/NavArrow/index.css';
+@import './components/CurrentPage/index.css';
+
+@import './components/WeclomePage/index.css';
+@import './components/MovieList/index.css';
+@import './components/MovieBox/index.css';
+@import './components/MovieDetail/index.css';
+
+
 * {
    margin: 0;
 }
 
 body {
-   height: 100%;
-   width: 100%;
-   background: rgb(0,66,255);
-   background: linear-gradient(266deg, rgba(0,66,255,0.5363095921962535) 0%, rgba(94,182,245,0.5895308807116597) 50%, rgba(0,212,255,0.7183824213279062) 89%);
+   background: #282b2a;
    overflow-y: scroll;
+}
+
+.wrapper {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
 }
 
 .header {
    width: 100%;
-   height: 5em;
-   background: rgb(239, 239, 240);
+   background-color: rgb(0, 0, 0);
+}
+
+.content {
+   flex-grow: 1;
 }
 
 .footer {
-   width: 100%;
-   height: 5em;
-   flex: 0 0 auto;
-   background: rgb(239, 239, 240);
-}
-
-.movie-list {
-   display: flex;
-   justify-content: center;
-   align-items: flex-start;
-   flex-wrap: wrap;
-}
-
-.movie-box {
-   width: 250px;
-   height: 400px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: flex-end;
-   text-align: center;
-   font-size: 1.2em;
-}
-
-.title-img {
-   width: 200px;
-   min-height: 270px;
-   background-image: url(./img/bg-poster.png);
-}
-
-.button-group {
-   display: flex;
-   justify-content: space-between;
-   padding-top: 3.5em;
-   padding-bottom: 0.5em;
-   padding-left: 20%;
-   padding-right: 20%;
-}
-
-.my-button {
-   width: 150px;
-   height: 50px;
-   background: rgba(115, 220, 241, 0.932);
-   border-radius: 1em;
-   border: 2px double rgba(23, 195, 230, 0.932);
-   box-shadow: 0 2px 2px rgba(23, 195, 230, 0.932);
-}
-
-.my-button:hover {
-   border-bottom: 1px solid rgba(23, 195, 230, 0.932);
-   position: relative;
-   top: 1px;
- }
-
- .my-button:active {
-   border-bottom: 1px solid transparent;
-   border-color: transparent;
-   position: relative;
-   top: 2px;
- }
-
- .my-button:focus {
-    outline: none;
-}
-
-.b-selected {
-   width: 150px;
-   height: 50px;
-   border-radius: 1em;
-   background: rgb(20, 210, 248);
-   border: 2px double rgba(23, 195, 230, 0.932);
-   box-shadow: 0 2px 2px rgba(23, 195, 230, 0.932);
-}
-
-.b-selected:focus {
-   outline: none;
-}
-
-.naw-arrows {
-   padding-top: 50px;
-   padding-bottom: 50px;
-   display: flex;
-   justify-content: space-around;
-}
-
-.arrow {
-   width: 250px;
-}
-
-.current-page {
-   width: 150px;
-   height: 50px;
-   text-align: center;
-   line-height: 2em;
-   font-size: 1.2em;
-   background: rgba(115, 220, 241, 0.932);
-   border-radius: 1em;
-   border: 2px double rgba(23, 195, 230, 0.932);
-}
-
-.error-message, .loading-message {
-   display: flex;
-   justify-content: center;
-   padding-top: 13%;
-   font-size: 2em;
+   background: rgb(0, 0, 0);
 }

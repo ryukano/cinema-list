@@ -7,13 +7,11 @@ import { currentMoviesPage } from '../../store/actions/currentMoviesPage';
 class NavArrow extends Component {
 
    render() {
-      const navArrowText = this.props.navArrowText;
-      const navDirection = this.props.navDirection;
-      const currentMoviesType = this.props.currentMoviesType;
-      let currentPage = this.props.currentPage;
+      const {navArrowText, navDirection, currentMoviesType} = this.props;
+      let {currentPage} = this.props;
 
-      return (
-         <button  className="my-button arrow"
+      return(
+         <button className="arrow"
                   onClick={(e) => {
                      if (navDirection === 'next') {
                         ++currentPage;

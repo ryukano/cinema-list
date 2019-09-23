@@ -1,0 +1,36 @@
+.welcome-page {
+   height: 100%;
+   background-image: url(../../img/movies-background2.png);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+}
+
+.welcome-info, .welcome-link {
+   background: #1d1d1d;
+   color: rgba(255, 255, 255, 0.726);
+}
+
+.welcome-page p {
+   text-align: center;
+   font-size: 2em;
+   font-weight: bold;
+}
+
+.welcome-info, .welcome-link-wrapper {
+   align-self: center;
+   width: 110vh;
+   border-radius: 0.1em;
+   padding: 2em 4em 2em 4em;
+   box-shadow: 0 0 0.5em rgba(252, 154, 42, 0.685);
+}
+
+.welcome-link-wrapper {
+   background-color: #111111;
+}
+
+.welcome-link:hover {
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+}

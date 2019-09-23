@@ -1,0 +1,13 @@
+.movie-list {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   grid-gap: 2em;
+   padding: 1.5em 1em 0 1em;
+}
+
+.error-message, .loading-message {
+   display: flex;
+   justify-content: center;
+   padding-top: 13%;
+   font-size: 2em;
+}
