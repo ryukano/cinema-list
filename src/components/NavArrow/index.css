@@ -30,3 +30,11 @@
    display: flex;
    justify-content: space-around;
 }
+
+@media (max-width: 800px) {
+   .arrow {
+      width: 20vh;
+      height: 8vh;
+      font-size: 1em;
+   }
+}

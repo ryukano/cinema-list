@@ -20,7 +20,7 @@
 
 .welcome-info, .welcome-link-wrapper {
    align-self: center;
-   width: 110vh;
+   width: 50vw;
    border-radius: 0.1em;
    padding: 2em 4em 2em 4em;
    box-shadow: 0 0 0.5em rgba(252, 154, 42, 0.685);
@@ -33,4 +33,16 @@
 .welcome-link:hover {
    color: rgb(255, 255, 255);
    text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+   .welcome-page p {
+      font-size: 1.5em;
+   }
+}
+
+@media (max-width: 600px) {
+   .welcome-page p {
+      font-size: 1em;
+   }
 }

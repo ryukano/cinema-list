@@ -89,3 +89,32 @@
 .movie-link-to-list:active {
    color: rgba(252, 154, 42, 0.685);
 }
+
+@media (max-width: 1000px) {
+
+   .movie-detail-first-block {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .movie-detail-poster {
+      height: auto;
+      min-width: 500px;
+      width: 80vw;
+   }
+
+   .movie-detail-production-counties {
+      margin-bottom: 1em;
+   }
+}
+
+@media (max-width: 700px) {
+
+   .movie-detail-poster {
+      min-width: 450px;
+   }
+
+   .movie-detail-production-counties {
+      margin-bottom: 1em;
+   }
+}
