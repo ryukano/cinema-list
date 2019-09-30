@@ -9,13 +9,11 @@ import transformDate from '../../modules/transform_date';
 class MovieDetail extends PureComponent {
 
    componentDidMount() {
-      console.log('movieID', this.props.match.params.movieID);
       this.props.onFetchMovieDetail(this.props.match.params.movieID);
    }
 
    render() {
       const movieDetail = this.props.movieDetail;
-      console.log('this movie detail', this.props.movieDetail);
 
       if (this.props.isLoading || movieDetail == null) {
             return <p className="loading-message">Loading…</p>;

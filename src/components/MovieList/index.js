@@ -10,8 +10,6 @@ import CurrentPage from '../CurrentPage';
 class MovieList extends Component {
 
    render() {
-      console.log('currentMoviesType ', this.props.currentMoviesType);
-      console.log('currentPage ', this.props.currentPage);
 
       return(
 
