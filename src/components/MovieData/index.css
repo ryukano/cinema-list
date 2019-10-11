@@ -1,0 +1,58 @@
+.error-message {
+   display: flex;
+   justify-content: center;
+   padding-top: 2em;
+   font-size: 2em;
+   color: white;
+}
+
+.loader {
+   width: 2em;
+   height: 2em;
+   display: flex;
+   top: 50%;
+   border-radius: 50%;
+   position: relative;
+   -webkit-animation: loader-2 0.9s 0.35s ease alternate infinite;
+   animation: loader 0.9s 0.35s ease alternate infinite;
+   margin: 4em auto 5em;
+ }
+
+ .loader:after,
+ .loader:before {
+   content: '';
+   position: absolute;
+   width: 2em;
+   height: 2em;
+   border-radius: 50%;
+   animation: loader-2 0.9s ease alternate infinite;
+   -webkit-animation: loader 0.9s ease alternate infinite;
+ }
+
+ .loader:before {
+   left: -4em;
+   animation-delay: 0.2s;
+ }
+
+ .loader:after {
+   right: -4em;
+   animation-delay: 0.5s;
+ }
+
+ @keyframes loader {
+   0% {
+     box-shadow: 0 3em 0 -3em #ffffff;
+   }
+   100% {
+     box-shadow: 0 3em 0 #ffffff;
+   }
+ }
+
+ @-webkit-keyframes loader {
+   0% {
+     box-shadow: 0 3em 0 -3em #ffffff;
+   }
+   100% {
+     box-shadow: 0 3em 0 #ffffff;
+   }
+ }

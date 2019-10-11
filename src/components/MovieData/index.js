@@ -14,12 +14,13 @@ class MovieData extends Component {
       const movieList = this.props.movieList;
 
       if (this.props.hasErrored) {
-         return <p className="error-message">Sorry! There was an error loading the items</p>;
+         return <p className="error-message">Sorry! There was an error loading the items</p>
      }
 
-     if (this.props.isLoading) {
-         return <p className="loading-message">Loading…</p>;
-     }
+      if (this.props.isLoading) {
+         return <div class="loader"></div>
+      }
+
       return(
 
          <div className="movie-list">

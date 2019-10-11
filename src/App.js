@@ -18,7 +18,7 @@ class App extends Component {
          <Provider store={store}>
          <div className="wrapper">
 
-            <header className="header"><div>fsdfsdfsd</div></header>
+            <header className="header">HEADER</header>
 
             <div className="content">
             <Router>
@@ -31,7 +31,7 @@ class App extends Component {
             </div>
 
 
-            <footer className="footer"><div>sdsfsdf</div></footer>
+            <footer className="footer">FOOTER</footer>
 
 
          </div>

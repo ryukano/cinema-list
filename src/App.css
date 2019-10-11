@@ -1,7 +1,7 @@
 @import './components/MoviesTypeButtons/index.css';
 @import './components/NavArrow/index.css';
 @import './components/CurrentPage/index.css';
-
+@import './components/MovieData/index.css';
 @import './components/WeclomePage/index.css';
 @import './components/MovieList/index.css';
 @import './components/MovieBox/index.css';

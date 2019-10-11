@@ -8,7 +8,12 @@ function Movie(props) {
    return(
       <div className="movie-box">
 
-         <img className="title-img" src={props.imgSRC} alt={props.title}></img>
+         <img
+            className="title-img"
+            src={props.imgSRC}
+            alt={props.title}>
+         </img>
+
          <p className="movie-title">{props.title.toUpperCase()}</p>
 
          <div>
@@ -27,6 +32,6 @@ let mapStateToProps = state => {
       currentMoviesType: state.currentMoviesTypeReducer.currentMoviesType,
       currentPage: state.currentMoviesPageReducer.currentPage
    }
-};
+}
 
 export default connect(mapStateToProps, null)(Movie);
